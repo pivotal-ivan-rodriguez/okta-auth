@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47E3B91E1A8AB2720042C90E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B91D1A8AB2720042C90E /* main.m */; };
+		47E3B9211A8AB2720042C90E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9201A8AB2720042C90E /* AppDelegate.m */; };
+		47E3B9241A8AB2720042C90E /* Okta_Auth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9221A8AB2720042C90E /* Okta_Auth.xcdatamodeld */; };
+		47E3B9261A8AB2720042C90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E3B9251A8AB2720042C90E /* Images.xcassets */; };
+		47E3B9291A8AB2720042C90E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E3B9271A8AB2720042C90E /* MainMenu.xib */; };
+		47E3B9351A8AB2720042C90E /* Okta_AuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9341A8AB2720042C90E /* Okta_AuthTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47E3B92F1A8AB2720042C90E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E3B9101A8AB2720042C90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E3B9171A8AB2720042C90E;
+			remoteInfo = "Okta Auth";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47E3B9181A8AB2720042C90E /* Okta Auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Okta Auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E3B91C1A8AB2720042C90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E3B91D1A8AB2720042C90E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47E3B91F1A8AB2720042C90E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		47E3B9201A8AB2720042C90E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		47E3B9231A8AB2720042C90E /* Okta_Auth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Okta_Auth.xcdatamodel; sourceTree = "<group>"; };
+		47E3B9251A8AB2720042C90E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47E3B9281A8AB2720042C90E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		47E3B92E1A8AB2720042C90E /* Okta AuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Okta AuthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E3B9331A8AB2720042C90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E3B9341A8AB2720042C90E /* Okta_AuthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Okta_AuthTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47E3B9151A8AB2720042C90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E3B92B1A8AB2720042C90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47E3B90F1A8AB2720042C90E = {
+			isa = PBXGroup;
+			children = (
+				47E3B91A1A8AB2720042C90E /* Okta Auth */,
+				47E3B9311A8AB2720042C90E /* Okta AuthTests */,
+				47E3B9191A8AB2720042C90E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47E3B9191A8AB2720042C90E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9181A8AB2720042C90E /* Okta Auth.app */,
+				47E3B92E1A8AB2720042C90E /* Okta AuthTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47E3B91A1A8AB2720042C90E /* Okta Auth */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B91F1A8AB2720042C90E /* AppDelegate.h */,
+				47E3B9201A8AB2720042C90E /* AppDelegate.m */,
+				47E3B9251A8AB2720042C90E /* Images.xcassets */,
+				47E3B9271A8AB2720042C90E /* MainMenu.xib */,
+				47E3B9221A8AB2720042C90E /* Okta_Auth.xcdatamodeld */,
+				47E3B91B1A8AB2720042C90E /* Supporting Files */,
+			);
+			path = "Okta Auth";
+			sourceTree = "<group>";
+		};
+		47E3B91B1A8AB2720042C90E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B91C1A8AB2720042C90E /* Info.plist */,
+				47E3B91D1A8AB2720042C90E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47E3B9311A8AB2720042C90E /* Okta AuthTests */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9341A8AB2720042C90E /* Okta_AuthTests.m */,
+				47E3B9321A8AB2720042C90E /* Supporting Files */,
+			);
+			path = "Okta AuthTests";
+			sourceTree = "<group>";
+		};
+		47E3B9321A8AB2720042C90E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9331A8AB2720042C90E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47E3B9171A8AB2720042C90E /* Okta Auth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47E3B9381A8AB2720042C90E /* Build configuration list for PBXNativeTarget "Okta Auth" */;
+			buildPhases = (
+				47E3B9141A8AB2720042C90E /* Sources */,
+				47E3B9151A8AB2720042C90E /* Frameworks */,
+				47E3B9161A8AB2720042C90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Okta Auth";
+			productName = "Okta Auth";
+			productReference = 47E3B9181A8AB2720042C90E /* Okta Auth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47E3B92D1A8AB2720042C90E /* Okta AuthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47E3B93B1A8AB2720042C90E /* Build configuration list for PBXNativeTarget "Okta AuthTests" */;
+			buildPhases = (
+				47E3B92A1A8AB2720042C90E /* Sources */,
+				47E3B92B1A8AB2720042C90E /* Frameworks */,
+				47E3B92C1A8AB2720042C90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47E3B9301A8AB2720042C90E /* PBXTargetDependency */,
+			);
+			name = "Okta AuthTests";
+			productName = "Okta AuthTests";
+			productReference = 47E3B92E1A8AB2720042C90E /* Okta AuthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47E3B9101A8AB2720042C90E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pivotal Labs";
+				TargetAttributes = {
+					47E3B9171A8AB2720042C90E = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					47E3B92D1A8AB2720042C90E = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 47E3B9171A8AB2720042C90E;
+					};
+				};
+			};
+			buildConfigurationList = 47E3B9131A8AB2720042C90E /* Build configuration list for PBXProject "Okta Auth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47E3B90F1A8AB2720042C90E;
+			productRefGroup = 47E3B9191A8AB2720042C90E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47E3B9171A8AB2720042C90E /* Okta Auth */,
+				47E3B92D1A8AB2720042C90E /* Okta AuthTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47E3B9161A8AB2720042C90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E3B9261A8AB2720042C90E /* Images.xcassets in Resources */,
+				47E3B9291A8AB2720042C90E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E3B92C1A8AB2720042C90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47E3B9141A8AB2720042C90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E3B9241A8AB2720042C90E /* Okta_Auth.xcdatamodeld in Sources */,
+				47E3B9211A8AB2720042C90E /* AppDelegate.m in Sources */,
+				47E3B91E1A8AB2720042C90E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E3B92A1A8AB2720042C90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E3B9351A8AB2720042C90E /* Okta_AuthTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47E3B9301A8AB2720042C90E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E3B9171A8AB2720042C90E /* Okta Auth */;
+			targetProxy = 47E3B92F1A8AB2720042C90E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47E3B9271A8AB2720042C90E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47E3B9281A8AB2720042C90E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47E3B9361A8AB2720042C90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		47E3B9371A8AB2720042C90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		47E3B9391A8AB2720042C90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Okta Auth/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		47E3B93A1A8AB2720042C90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Okta Auth/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		47E3B93C1A8AB2720042C90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Okta AuthTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Okta Auth.app/Contents/MacOS/Okta Auth";
+			};
+			name = Debug;
+		};
+		47E3B93D1A8AB2720042C90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Okta AuthTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Okta Auth.app/Contents/MacOS/Okta Auth";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47E3B9131A8AB2720042C90E /* Build configuration list for PBXProject "Okta Auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E3B9361A8AB2720042C90E /* Debug */,
+				47E3B9371A8AB2720042C90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47E3B9381A8AB2720042C90E /* Build configuration list for PBXNativeTarget "Okta Auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E3B9391A8AB2720042C90E /* Debug */,
+				47E3B93A1A8AB2720042C90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47E3B93B1A8AB2720042C90E /* Build configuration list for PBXNativeTarget "Okta AuthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E3B93C1A8AB2720042C90E /* Debug */,
+				47E3B93D1A8AB2720042C90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47E3B9221A8AB2720042C90E /* Okta_Auth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47E3B9231A8AB2720042C90E /* Okta_Auth.xcdatamodel */,
+			);
+			currentVersion = 47E3B9231A8AB2720042C90E /* Okta_Auth.xcdatamodel */;
+			path = Okta_Auth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 47E3B9101A8AB2720042C90E /* Project object */;
+}
