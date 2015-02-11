@@ -7,22 +7,86 @@
 //
 
 #import "AppDelegate.h"
+#import "AddUserWindowController.h"
+#import "User.h"
+#import "Constants.h"
 
-@interface AppDelegate ()
+#import "TOTPGenerator.h"
+#import "MF_Base32Additions.h"
 
+#import <ParseOSX/ParseOSX.h>
+
+static NSInteger const kPINDigits = 6;
+static NSInteger const kPINExpireTime = 30;
+static NSString * const kSelectUserButtonText = @"*Select User*";
+
+@interface AppDelegate () <AddUserWindowControllerDelegate>
+
+@property (weak) IBOutlet NSPopUpButton *userListButton;
+@property (weak) IBOutlet NSTextField *codeLabel;
+@property (weak) IBOutlet NSTextField *timeLabel;
+@property (weak) IBOutlet NSButton *clipboardButton;
 @property (weak) IBOutlet NSWindow *window;
-- (IBAction)saveAction:(id)sender;
+
+@property (nonatomic, strong) AddUserWindowController *addUserWindowController;
+@property (nonatomic, strong) NSMutableArray *users;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) User *selectedUser;
+@property (nonatomic, strong) NSString *currentPing;
+@property (nonatomic, assign) NSUInteger expireTime;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [self.window center];
+    [self initializeParse];
+    [self initialSetup];
+    [self loadSavedUsers];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+#pragma mark - Getters
+
+- (AddUserWindowController *)addUserWindowController {
+    if (!_addUserWindowController) {
+        NSString *addUserWindowControllerNib = NSStringFromClass([AddUserWindowController class]);
+        _addUserWindowController = [[AddUserWindowController alloc] initWithWindowNibName:addUserWindowControllerNib];
+        _addUserWindowController.delegate = self;
+    }
+    return _addUserWindowController;
+}
+
+- (NSMutableArray *)users {
+    if (!_users) {
+        _users = [NSMutableArray new];
+    }
+    return _users;
+}
+
+#pragma mark - IBActions
+
+- (IBAction)addUserButtonClicked:(NSButton *)sender {
+    [self.addUserWindowController showWindow:self];
+}
+
+- (IBAction)selectUserButton:(NSPopUpButton *)sender {
+    if (sender.title.length == 0 || [sender.title isEqualToString:kSelectUserButtonText]) return;
+    
+    self.selectedUser = [User userForUsername:sender.title];
+    [self startTimer];
+}
+
+- (IBAction)copyToClipboard:(NSButton *)sender {
+    if (!self.currentPing) return;
+    
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard clearContents];
+    [pasteboard writeObjects:@[self.currentPing]];
 }
 
 #pragma mark - Core Data stack
@@ -173,6 +237,93 @@
     }
 
     return NSTerminateNow;
+}
+
+#pragma mark - AddUserWindowControllerDelegate
+
+- (void)userDidSaveNewUser:(User *)user {
+    [self.users addObject:user];
+    [self.userListButton addItemWithTitle:user.username];
+    [self.addUserWindowController close];
+}
+
+#pragma mark - Private
+
+- (void)initializeParse {
+    [Parse enableLocalDatastore];
+    [Parse setApplicationId:@"CfwEfgQlyADIXMpC0P3TW6rCTtqvbAvZvpO0NYSe" clientKey:@"MerS9PaizY7CggbPyCMt2R1uzG9xf2Zt9vVGCITy"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:nil];
+}
+
+- (void)initialSetup {
+    self.codeLabel.stringValue = @"";
+    self.timeLabel.stringValue = @"";
+    [self.clipboardButton setHidden:YES];
+    [self.timeLabel setHidden:YES];
+}
+
+- (void)loadSavedUsers {
+    PFQuery *query = [PFQuery queryWithClassName:@"OktaUser"];
+    
+    __weak typeof(self) weakSelf = self;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        [objects enumerateObjectsUsingBlock:^(PFObject *pfUser, NSUInteger idx, BOOL *stop) {
+            User *user = [User userFromParseUser:pfUser];
+            [weakSelf.users addObject:user];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.userListButton addItemWithTitle:user.username];
+            });
+        }];
+    }];
+}
+
+- (void)startTimer {
+    if (self.timer) {
+        [self.timer invalidate];
+    }
+
+    [self.clipboardButton setHidden:NO];
+    [self.timeLabel setHidden:NO];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateUI) userInfo:nil repeats:YES];
+    
+    [self calculateExpireTime];
+}
+
+- (void)updateUI {
+    NSString *pin = [self generatePINForUser:self.selectedUser];
+    self.currentPing = pin;
+    if (pin.length == kPINDigits) {
+        NSInteger half = (kPINDigits/2);
+        self.codeLabel.stringValue = [NSString stringWithFormat:@"%@ %@",[pin substringToIndex:half],[pin substringFromIndex:half]];
+        [self decreaseTime];
+    }
+}
+
+- (void)decreaseTime {
+    if (self.expireTime > 0) self.expireTime--;
+    else [self calculateExpireTime];
+    
+    self.timeLabel.stringValue = [NSString stringWithFormat:@"%lus",(unsigned long)self.expireTime];
+}
+
+- (void)calculateExpireTime {
+    NSInteger expireTime = kPINExpireTime;
+    long timestamp = (long)[[NSDate date] timeIntervalSince1970];
+    if(timestamp % kPINExpireTime != 0){
+        expireTime -= timestamp % kPINExpireTime;
+    }
+    self.expireTime = expireTime;
+}
+
+- (NSString *)generatePINForUser:(User *)user {
+    NSData *secretData =  [NSData dataWithBase32String:user.secret];
+    TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:kPINDigits period:kPINExpireTime];
+    
+    long timestamp = (long)[[NSDate date] timeIntervalSince1970];
+    if(timestamp % kPINExpireTime != 0){
+        timestamp -= timestamp % kPINExpireTime;
+    }
+    return [generator generateOTPForDate:[NSDate dateWithTimeIntervalSince1970:timestamp]];
 }
 
 @end

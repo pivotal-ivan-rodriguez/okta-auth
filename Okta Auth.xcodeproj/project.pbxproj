@@ -13,6 +13,26 @@
 		47E3B9261A8AB2720042C90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E3B9251A8AB2720042C90E /* Images.xcassets */; };
 		47E3B9291A8AB2720042C90E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E3B9271A8AB2720042C90E /* MainMenu.xib */; };
 		47E3B9351A8AB2720042C90E /* Okta_AuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9341A8AB2720042C90E /* Okta_AuthTests.m */; };
+		47E3B9451A8AB2980042C90E /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9401A8AB2980042C90E /* OTPGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47E3B9461A8AB2980042C90E /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9421A8AB2980042C90E /* TOTPGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47E3B9471A8AB2980042C90E /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9441A8AB2980042C90E /* MF_Base32Additions.m */; };
+		47E3B9511A8BB0CA0042C90E /* AddUserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B94F1A8BB0CA0042C90E /* AddUserWindowController.m */; };
+		47E3B9521A8BB0CA0042C90E /* AddUserWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E3B9501A8BB0CA0042C90E /* AddUserWindowController.xib */; };
+		47E3B95C1A8BC3BA0042C90E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B95B1A8BC3BA0042C90E /* User.m */; };
+		47E3B95F1A8BC5440042C90E /* BaseManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B95E1A8BC5440042C90E /* BaseManagedObject.m */; };
+		47E3B9631A8BC6F20042C90E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3B9621A8BC6F20042C90E /* Constants.m */; };
+		47E3B9681A8C004B0042C90E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9661A8C004B0042C90E /* Bolts.framework */; };
+		47E3B9691A8C004B0042C90E /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9671A8C004B0042C90E /* ParseOSX.framework */; };
+		47E3B96B1A8C01E40042C90E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B96A1A8C01E40042C90E /* CFNetwork.framework */; };
+		47E3B96D1A8C01EB0042C90E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B96C1A8C01EB0042C90E /* CoreGraphics.framework */; };
+		47E3B96F1A8C01F20042C90E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B96E1A8C01F20042C90E /* CoreLocation.framework */; };
+		47E3B9711A8C01F90042C90E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9701A8C01F90042C90E /* QuartzCore.framework */; };
+		47E3B9731A8C02020042C90E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9721A8C02020042C90E /* Security.framework */; };
+		47E3B9751A8C020B0042C90E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9741A8C020B0042C90E /* SystemConfiguration.framework */; };
+		47E3B9771A8C02140042C90E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9761A8C02140042C90E /* libsqlite3.dylib */; };
+		47E3B9791A8C021F0042C90E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E3B9781A8C021F0042C90E /* libz.dylib */; };
+		47E3B97B1A8C026B0042C90E /* Bolts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47E3B9661A8C004B0042C90E /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47E3B97C1A8C02700042C90E /* ParseOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47E3B9671A8C004B0042C90E /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +44,20 @@
 			remoteInfo = "Okta Auth";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47E3B97A1A8C02560042C90E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				47E3B97C1A8C02700042C90E /* ParseOSX.framework in CopyFiles */,
+				47E3B97B1A8C026B0042C90E /* Bolts.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		47E3B9181A8AB2720042C90E /* Okta Auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Okta Auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +71,31 @@
 		47E3B92E1A8AB2720042C90E /* Okta AuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Okta AuthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E3B9331A8AB2720042C90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E3B9341A8AB2720042C90E /* Okta_AuthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Okta_AuthTests.m; sourceTree = "<group>"; };
+		47E3B93F1A8AB2980042C90E /* OTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPGenerator.h; sourceTree = "<group>"; };
+		47E3B9401A8AB2980042C90E /* OTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPGenerator.m; sourceTree = "<group>"; };
+		47E3B9411A8AB2980042C90E /* TOTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOTPGenerator.h; sourceTree = "<group>"; };
+		47E3B9421A8AB2980042C90E /* TOTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTPGenerator.m; sourceTree = "<group>"; };
+		47E3B9431A8AB2980042C90E /* MF_Base32Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base32Additions.h; sourceTree = "<group>"; };
+		47E3B9441A8AB2980042C90E /* MF_Base32Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base32Additions.m; sourceTree = "<group>"; };
+		47E3B94E1A8BB0CA0042C90E /* AddUserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserWindowController.h; sourceTree = "<group>"; };
+		47E3B94F1A8BB0CA0042C90E /* AddUserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserWindowController.m; sourceTree = "<group>"; };
+		47E3B9501A8BB0CA0042C90E /* AddUserWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddUserWindowController.xib; sourceTree = "<group>"; };
+		47E3B95A1A8BC3BA0042C90E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		47E3B95B1A8BC3BA0042C90E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		47E3B95D1A8BC5440042C90E /* BaseManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseManagedObject.h; sourceTree = "<group>"; };
+		47E3B95E1A8BC5440042C90E /* BaseManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseManagedObject.m; sourceTree = "<group>"; };
+		47E3B9611A8BC6F20042C90E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		47E3B9621A8BC6F20042C90E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		47E3B9661A8C004B0042C90E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		47E3B9671A8C004B0042C90E /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseOSX.framework; sourceTree = "<group>"; };
+		47E3B96A1A8C01E40042C90E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		47E3B96C1A8C01EB0042C90E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47E3B96E1A8C01F20042C90E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		47E3B9701A8C01F90042C90E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47E3B9721A8C02020042C90E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		47E3B9741A8C020B0042C90E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		47E3B9761A8C02140042C90E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		47E3B9781A8C021F0042C90E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +103,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E3B9791A8C021F0042C90E /* libz.dylib in Frameworks */,
+				47E3B9771A8C02140042C90E /* libsqlite3.dylib in Frameworks */,
+				47E3B9751A8C020B0042C90E /* SystemConfiguration.framework in Frameworks */,
+				47E3B9731A8C02020042C90E /* Security.framework in Frameworks */,
+				47E3B9711A8C01F90042C90E /* QuartzCore.framework in Frameworks */,
+				47E3B96F1A8C01F20042C90E /* CoreLocation.framework in Frameworks */,
+				47E3B96D1A8C01EB0042C90E /* CoreGraphics.framework in Frameworks */,
+				47E3B96B1A8C01E40042C90E /* CFNetwork.framework in Frameworks */,
+				47E3B9681A8C004B0042C90E /* Bolts.framework in Frameworks */,
+				47E3B9691A8C004B0042C90E /* ParseOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				47E3B91A1A8AB2720042C90E /* Okta Auth */,
+				47E3B9651A8C00340042C90E /* Frameworks */,
 				47E3B9311A8AB2720042C90E /* Okta AuthTests */,
 				47E3B9191A8AB2720042C90E /* Products */,
 			);
@@ -78,11 +148,14 @@
 		47E3B91A1A8AB2720042C90E /* Okta Auth */ = {
 			isa = PBXGroup;
 			children = (
+				47E3B9641A8BCB670042C90E /* Images */,
+				47E3B9601A8BC6E80042C90E /* Helpers */,
+				47E3B93E1A8AB2830042C90E /* Auth Library */,
+				47E3B9591A8BC3640042C90E /* Models */,
+				47E3B9581A8BC35F0042C90E /* Views */,
+				47E3B9481A8BB08E0042C90E /* Controllers */,
 				47E3B91F1A8AB2720042C90E /* AppDelegate.h */,
 				47E3B9201A8AB2720042C90E /* AppDelegate.m */,
-				47E3B9251A8AB2720042C90E /* Images.xcassets */,
-				47E3B9271A8AB2720042C90E /* MainMenu.xib */,
-				47E3B9221A8AB2720042C90E /* Okta_Auth.xcdatamodeld */,
 				47E3B91B1A8AB2720042C90E /* Supporting Files */,
 			);
 			path = "Okta Auth";
@@ -114,6 +187,84 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		47E3B93E1A8AB2830042C90E /* Auth Library */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B93F1A8AB2980042C90E /* OTPGenerator.h */,
+				47E3B9401A8AB2980042C90E /* OTPGenerator.m */,
+				47E3B9411A8AB2980042C90E /* TOTPGenerator.h */,
+				47E3B9421A8AB2980042C90E /* TOTPGenerator.m */,
+				47E3B9431A8AB2980042C90E /* MF_Base32Additions.h */,
+				47E3B9441A8AB2980042C90E /* MF_Base32Additions.m */,
+			);
+			name = "Auth Library";
+			sourceTree = "<group>";
+		};
+		47E3B9481A8BB08E0042C90E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B94E1A8BB0CA0042C90E /* AddUserWindowController.h */,
+				47E3B94F1A8BB0CA0042C90E /* AddUserWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		47E3B9581A8BC35F0042C90E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9501A8BB0CA0042C90E /* AddUserWindowController.xib */,
+				47E3B9271A8AB2720042C90E /* MainMenu.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		47E3B9591A8BC3640042C90E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9221A8AB2720042C90E /* Okta_Auth.xcdatamodeld */,
+				47E3B95D1A8BC5440042C90E /* BaseManagedObject.h */,
+				47E3B95E1A8BC5440042C90E /* BaseManagedObject.m */,
+				47E3B95A1A8BC3BA0042C90E /* User.h */,
+				47E3B95B1A8BC3BA0042C90E /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		47E3B9601A8BC6E80042C90E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9611A8BC6F20042C90E /* Constants.h */,
+				47E3B9621A8BC6F20042C90E /* Constants.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		47E3B9641A8BCB670042C90E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9251A8AB2720042C90E /* Images.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		47E3B9651A8C00340042C90E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47E3B9781A8C021F0042C90E /* libz.dylib */,
+				47E3B9761A8C02140042C90E /* libsqlite3.dylib */,
+				47E3B9741A8C020B0042C90E /* SystemConfiguration.framework */,
+				47E3B9721A8C02020042C90E /* Security.framework */,
+				47E3B9701A8C01F90042C90E /* QuartzCore.framework */,
+				47E3B96E1A8C01F20042C90E /* CoreLocation.framework */,
+				47E3B96C1A8C01EB0042C90E /* CoreGraphics.framework */,
+				47E3B96A1A8C01E40042C90E /* CFNetwork.framework */,
+				47E3B9661A8C004B0042C90E /* Bolts.framework */,
+				47E3B9671A8C004B0042C90E /* ParseOSX.framework */,
+			);
+			name = Frameworks;
+			path = "Okta Auth";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +275,7 @@
 				47E3B9141A8AB2720042C90E /* Sources */,
 				47E3B9151A8AB2720042C90E /* Frameworks */,
 				47E3B9161A8AB2720042C90E /* Resources */,
+				47E3B97A1A8C02560042C90E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -194,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E3B9521A8BB0CA0042C90E /* AddUserWindowController.xib in Resources */,
 				47E3B9261A8AB2720042C90E /* Images.xcassets in Resources */,
 				47E3B9291A8AB2720042C90E /* MainMenu.xib in Resources */,
 			);
@@ -213,9 +366,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E3B95F1A8BC5440042C90E /* BaseManagedObject.m in Sources */,
+				47E3B95C1A8BC3BA0042C90E /* User.m in Sources */,
 				47E3B9241A8AB2720042C90E /* Okta_Auth.xcdatamodeld in Sources */,
 				47E3B9211A8AB2720042C90E /* AppDelegate.m in Sources */,
+				47E3B9461A8AB2980042C90E /* TOTPGenerator.m in Sources */,
+				47E3B9631A8BC6F20042C90E /* Constants.m in Sources */,
 				47E3B91E1A8AB2720042C90E /* main.m in Sources */,
+				47E3B9471A8AB2980042C90E /* MF_Base32Additions.m in Sources */,
+				47E3B9451A8AB2980042C90E /* OTPGenerator.m in Sources */,
+				47E3B9511A8BB0CA0042C90E /* AddUserWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +490,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Okta",
+					Auth,
+				);
 				INFOPLIST_FILE = "Okta Auth/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -341,8 +507,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Okta",
+					Auth,
+				);
 				INFOPLIST_FILE = "Okta Auth/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -362,6 +534,7 @@
 				);
 				INFOPLIST_FILE = "Okta AuthTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Okta Auth.app/Contents/MacOS/Okta Auth";
 			};
@@ -378,6 +551,7 @@
 				);
 				INFOPLIST_FILE = "Okta AuthTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Okta Auth.app/Contents/MacOS/Okta Auth";
 			};
